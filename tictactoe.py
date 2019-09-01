@@ -2,6 +2,11 @@
 import pygame
 from pygame.locals import *
 
+""""
+-TODO
+    *separate into different files
+"""
+
 # declare our global variables for the game
 XO = "X"  # track whose turn it is; X goes first
 grid = [[None, None, None],
