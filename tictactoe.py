@@ -1,10 +1,12 @@
 # import necessary modules
 import pygame
+import SmallGrid
 from pygame.locals import *
 
 """"
 -TODO
     *separate into different files
+    *make small grid a class, make each one an object with its own "click" function
 """
 
 # declare our global variables for the game
@@ -46,75 +48,50 @@ def draw_small_grid():
 
 def draw_small_grid_1_1():
     # horizontal lines for small grid 1,1
-    pygame.draw.line(background, (0, 0, 0), (20, 100), (280, 100), 4)
-    pygame.draw.line(background, (0, 0, 0), (20, 200), (280, 200), 4)
-    # vertical lines for small grid 1,1
-    pygame.draw.line(background, (0, 0, 0), (100, 20), (100, 280), 4)
-    pygame.draw.line(background, (0, 0, 0), (200, 20), (200, 280), 4)
+    grid_1_1 = SmallGrid.SmallGrid(20, 100, 280, 100, 20, 200, 280, 200, 100, 20, 100, 280, 200, 20, 200, 280)
+    grid_1_1.draw_small_grid(background)
+
 
 def draw_small_grid_2_1():
-    # horizontal lines for small grid 2,1
-    pygame.draw.line(background, (0, 0, 0), (320, 100), (580, 100), 4)
-    pygame.draw.line(background, (0, 0, 0), (320, 200), (580, 200), 4)
-    # vertical lines for small grid 2, 1
-    pygame.draw.line(background, (0, 0, 0), (400, 20), (400, 280), 4)
-    pygame.draw.line(background, (0, 0, 0), (500, 20), (500, 280), 4)
+
+    grid_2_1 = SmallGrid.SmallGrid(320, 100, 580, 100, 320, 200, 580, 200, 400, 20, 400, 280, 500, 20, 500, 280)
+    grid_2_1.draw_small_grid(background)
+
 
 def draw_small_grid_3_1():
-    # horizontal lines for small grid 3,1
-    pygame.draw.line(background, (0, 0, 0), (620, 100), (880, 100), 4)
-    pygame.draw.line(background, (0, 0, 0), (620, 200), (880, 200), 4)
-    # vertical lines for small grid 3,1
-    pygame.draw.line(background, (0, 0, 0), (700, 20), (700, 280), 4)
-    pygame.draw.line(background, (0, 0, 0), (800, 20), (800, 280), 4)
+
+    grid_3_1 = SmallGrid.SmallGrid(620, 100, 880, 100, 620, 200, 880, 200, 700, 20, 700, 280, 800, 20, 800, 280)
+    grid_3_1.draw_small_grid(background)
 
 def draw_small_grid_1_2():
-    # horizontal lines for small grid 1,2
-    pygame.draw.line(background, (0, 0, 0), (20, 400), (280, 400), 4)
-    pygame.draw.line(background, (0, 0, 0), (20, 500), (280, 500), 4)
-    # vertical liens for small grid 1,2
-    pygame.draw.line(background, (0, 0, 0), (100, 320), (100, 580), 4)
-    pygame.draw.line(background, (0, 0, 0), (200, 320), (200, 580), 4)
+
+    grid_1_2 = SmallGrid.SmallGrid(20, 400, 280, 400, 20, 500, 280, 500, 100, 320, 100, 580, 200, 320, 200, 580)
+    grid_1_2.draw_small_grid(background)
 
 def draw_small_grid_1_3():
-    # horizontal lines for small grid 1,3
-    pygame.draw.line(background, (0, 0, 0), (20, 700), (280, 700), 4)
-    pygame.draw.line(background, (0, 0, 0), (20, 800), (280, 800), 4)
-    # vertical lines for small grid 1,3
-    pygame.draw.line(background, (0, 0, 0), (100, 620), (100, 880), 4)
-    pygame.draw.line(background, (0, 0, 0), (200, 620), (200, 880), 4)
+
+    grid_1_3 = SmallGrid.SmallGrid(20, 700, 280, 700, 20, 800, 280, 800, 100, 620, 100, 880, 200, 620, 200, 880)
+    grid_1_3.draw_small_grid(background)
 
 def draw_small_grid_2_2():
-    # horizontal lines for small grid 2,2
-    pygame.draw.line(background, (0, 0, 0), (320, 400), (580, 400), 4)
-    pygame.draw.line(background, (0, 0, 0), (320, 500), (580, 500), 4)
-    # veritcal lines for small grid 2,2
-    pygame.draw.line(background, (0, 0, 0), (400, 320), (400, 580), 4)
-    pygame.draw.line(background, (0, 0, 0), (500, 320), (500, 580), 4)
+
+    grid_2_2 = SmallGrid.SmallGrid(320, 400, 580, 400, 320, 500, 580, 500, 400, 320, 400, 580, 500, 320, 500, 580)
+    grid_2_2.draw_small_grid(background)
 
 def draw_small_grid_3_2():
-    # horizontal lines for small grid 3,2
-    pygame.draw.line(background, (0, 0, 0), (620, 400), (880, 400), 4)
-    pygame.draw.line(background, (0, 0, 0), (620, 500), (880, 500), 4)
-    # vertical lines for small grid 3,2
-    pygame.draw.line(background, (0, 0, 0), (700, 320), (700, 580), 4)
-    pygame.draw.line(background, (0, 0, 0), (800, 320), (800, 580), 4)
+
+    grid_3_2 = SmallGrid.SmallGrid(620, 400, 880, 400, 620, 500, 880, 500, 700, 320, 700, 580, 800, 320, 800, 580)
+    grid_3_2.draw_small_grid(background)
 
 def draw_small_grid_3_3():
-    # horizontal lines for small grid 3,3
-    pygame.draw.line(background, (0, 0, 0), (620, 700), (880, 700), 4)
-    pygame.draw.line(background, (0, 0, 0), (620, 800), (880, 800), 4)
-    # vertical liens fro small grid 3,3
-    pygame.draw.line(background, (0, 0, 0), (700, 620), (700, 880), 4)
-    pygame.draw.line(background, (0, 0, 0), (800, 620), (800, 880), 4)
+
+    grid_3_3 = SmallGrid.SmallGrid(620, 700, 880, 700, 620, 800, 880, 800, 700, 620, 700, 880, 800, 620, 800, 880)
+    grid_3_3.draw_small_grid(background)
 
 def draw_small_grid_2_3():
-    # horizontal lines for small grid 2,3
-    pygame.draw.line(background, (0, 0, 0), (320, 700), (580, 700), 4)
-    pygame.draw.line(background, (0, 0, 0), (320, 800), (580, 800), 4)
-    # vertical lines for small grid 2,3
-    pygame.draw.line(background, (0, 0, 0), (400, 620), (400, 880), 4)
-    pygame.draw.line(background, (0, 0, 0), (500, 620), (500, 880), 4)
+
+    grid_2_3 = SmallGrid.SmallGrid(320, 700, 580, 700, 320, 800, 580, 800, 400, 620, 400, 880, 500, 620, 500, 880)
+    grid_2_3.draw_small_grid(background)
 
 def init_board():
 
@@ -181,7 +158,7 @@ def board_position(mouseX, mouseY):
     else:
         col = 2
 
-    # return the tuple containg the row & column
+    # return the tuple containing the row & column
     return (row, col)
 
 
@@ -201,10 +178,10 @@ def draw_move(board, boardRow, boardCol, Piece):
     if (Piece == 'O'):
         pygame.draw.circle(board, (0, 0, 0), (centerX, centerY), 44, 2)
     else:
-        pygame.draw.line(board, (0, 0, 0), (centerX - 22, centerY - 22),
-                         (centerX + 22, centerY + 22), 2)
-        pygame.draw.line(board, (0, 0, 0), (centerX + 22, centerY - 22),
-                         (centerX - 22, centerY + 22), 2)
+        pygame.draw.line(board, (0, 0, 0), (centerX - 25, centerY - 25),
+                         (centerX + 25, centerY + 25), 4)
+        pygame.draw.line(board, (0, 0, 0), (centerX + 25, centerY - 25),
+                         (centerX - 25, centerY + 25), 4)
 
     # mark the space as used
     grid[boardRow][boardCol] = Piece
@@ -225,7 +202,6 @@ def click_board(board):
     if ((grid[row][col] == "X") or (grid[row][col] == "O")):
         # this space is in use
         return
-
     # draw an X or O
     draw_move(board, row, col, XO)
 
@@ -275,7 +251,6 @@ def check_for_win(board):
         # game won diagonally right to left
         winner = grid[0][2]
         pygame.draw.line(board, (250, 0, 0), (250, 50), (50, 250), 4)
-
 
 # --------------------------------------------------------------------
 # initialize pygame and our window
