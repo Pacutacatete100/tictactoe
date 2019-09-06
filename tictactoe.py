@@ -1,6 +1,6 @@
 # import necessary modules
 import pygame
-import SmallGrid
+from SmallGrid import *
 from pygame.locals import *
 
 """"
@@ -22,6 +22,18 @@ background = pygame.Surface(window_size.get_size())
 background = background.convert()
 background.fill((250, 250, 250))
 
+grid_1_1 = SmallGrid(20, 100, 280, 100, 20, 200, 280, 200, 100, 20, 100, 280, 200, 20, 200, 280)
+grid_2_1 = SmallGrid(320, 100, 580, 100, 320, 200, 580, 200, 400, 20, 400, 280, 500, 20, 500, 280)
+grid_3_1 = SmallGrid(620, 100, 880, 100, 620, 200, 880, 200, 700, 20, 700, 280, 800, 20, 800, 280)
+
+grid_1_2 = SmallGrid(20, 400, 280, 400, 20, 500, 280, 500, 100, 320, 100, 580, 200, 320, 200, 580)
+grid_1_3 = SmallGrid(20, 700, 280, 700, 20, 800, 280, 800, 100, 620, 100, 880, 200, 620, 200, 880)
+grid_2_2 = SmallGrid(320, 400, 580, 400, 320, 500, 580, 500, 400, 320, 400, 580, 500, 320, 500, 580)
+
+grid_3_2 = SmallGrid(620, 400, 880, 400, 620, 500, 880, 500, 700, 320, 700, 580, 800, 320, 800, 580)
+grid_3_3 = SmallGrid(620, 700, 880, 700, 620, 800, 880, 800, 700, 620, 700, 880, 800, 620, 800, 880)
+grid_2_3 = SmallGrid(320, 700, 580, 700, 320, 800, 580, 800, 400, 620, 400, 880, 500, 620, 500, 880)
+
 
 # declare our support functions
 def draw_big_grid():
@@ -33,64 +45,14 @@ def draw_big_grid():
     pygame.draw.line(background, (130, 0, 0), (20, 600), (880, 600), 4)
 
 def draw_small_grid():
-
-   draw_small_grid_1_1()
-   draw_small_grid_1_2()
-   draw_small_grid_1_3()
-
-   draw_small_grid_2_1()
-   draw_small_grid_2_2()
-   draw_small_grid_2_3()
-
-   draw_small_grid_3_1()
-   draw_small_grid_3_2()
-   draw_small_grid_3_3()
-
-def draw_small_grid_1_1():
-    # horizontal lines for small grid 1,1
-    grid_1_1 = SmallGrid.SmallGrid(20, 100, 280, 100, 20, 200, 280, 200, 100, 20, 100, 280, 200, 20, 200, 280)
     grid_1_1.draw_small_grid(background)
-
-
-def draw_small_grid_2_1():
-
-    grid_2_1 = SmallGrid.SmallGrid(320, 100, 580, 100, 320, 200, 580, 200, 400, 20, 400, 280, 500, 20, 500, 280)
     grid_2_1.draw_small_grid(background)
-
-
-def draw_small_grid_3_1():
-
-    grid_3_1 = SmallGrid.SmallGrid(620, 100, 880, 100, 620, 200, 880, 200, 700, 20, 700, 280, 800, 20, 800, 280)
     grid_3_1.draw_small_grid(background)
-
-def draw_small_grid_1_2():
-
-    grid_1_2 = SmallGrid.SmallGrid(20, 400, 280, 400, 20, 500, 280, 500, 100, 320, 100, 580, 200, 320, 200, 580)
     grid_1_2.draw_small_grid(background)
-
-def draw_small_grid_1_3():
-
-    grid_1_3 = SmallGrid.SmallGrid(20, 700, 280, 700, 20, 800, 280, 800, 100, 620, 100, 880, 200, 620, 200, 880)
     grid_1_3.draw_small_grid(background)
-
-def draw_small_grid_2_2():
-
-    grid_2_2 = SmallGrid.SmallGrid(320, 400, 580, 400, 320, 500, 580, 500, 400, 320, 400, 580, 500, 320, 500, 580)
     grid_2_2.draw_small_grid(background)
-
-def draw_small_grid_3_2():
-
-    grid_3_2 = SmallGrid.SmallGrid(620, 400, 880, 400, 620, 500, 880, 500, 700, 320, 700, 580, 800, 320, 800, 580)
     grid_3_2.draw_small_grid(background)
-
-def draw_small_grid_3_3():
-
-    grid_3_3 = SmallGrid.SmallGrid(620, 700, 880, 700, 620, 800, 880, 800, 700, 620, 700, 880, 800, 620, 800, 880)
     grid_3_3.draw_small_grid(background)
-
-def draw_small_grid_2_3():
-
-    grid_2_3 = SmallGrid.SmallGrid(320, 700, 580, 700, 320, 800, 580, 800, 400, 620, 400, 880, 500, 620, 500, 880)
     grid_2_3.draw_small_grid(background)
 
 def init_board():
@@ -122,7 +84,6 @@ def draw_status(board):
     # copy the rendered message onto the board
     board.fill((250, 250, 250), (0, 880, 880, 25))
     board.blit(text, (10, 880))
-
 
 def show_board(window_size, board):
     # redraw the game board on the display
