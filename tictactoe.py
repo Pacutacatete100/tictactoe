@@ -4,9 +4,10 @@ from SmallGrid import *
 from pygame.locals import *
 
 """"
--TODO
+-TODO:
     *separate into different files
     *make small grid a class, make each one an object with its own "click" function
+    *figure out math to not have specific numbers in parameters for objects
 """
 
 # declare our global variables for the game
@@ -20,7 +21,7 @@ winner = None
 window_size = pygame.display.set_mode((900, 900))
 background = pygame.Surface(window_size.get_size())
 background = background.convert()
-background.fill((250, 250, 250))
+background.fill((255, 255, 255))
 
 grid_1_1 = SmallGrid(20, 100, 280, 100, 20, 200, 280, 200, 100, 20, 100, 280, 200, 20, 200, 280)
 grid_2_1 = SmallGrid(320, 100, 580, 100, 320, 200, 580, 200, 400, 20, 400, 280, 500, 20, 500, 280)
@@ -148,29 +149,29 @@ def draw_move(board, boardRow, boardCol, Piece):
     grid[boardRow][boardCol] = Piece
 
 
-def click_board(board):
-    # determine where the user clicked and if the space is not already
-    # occupied, draw the appropriate piece there (X or O)
-    # ---------------------------------------------------------------
-    # board : the game board surface
-
-    global grid, XO
-
-    (mouseX, mouseY) = pygame.mouse.get_pos()
-    (row, col) = board_position(mouseX, mouseY)
-
-    # make sure no one's used this space
-    if ((grid[row][col] == "X") or (grid[row][col] == "O")):
-        # this space is in use
-        return
-    # draw an X or O
-    draw_move(board, row, col, XO)
-
-    # toggle XO to the other player's move
-    if (XO == "X"):
-        XO = "O"
-    else:
-        XO = "X"
+# def click_board(board):
+#     # determine where the user clicked and if the space is not already
+#     # occupied, draw the appropriate piece there (X or O)
+#     # ---------------------------------------------------------------
+#     # board : the game board surface
+#
+#     global grid, XO
+#
+#     (mouseX, mouseY) = pygame.mouse.get_pos()
+#     (row, col) = board_position(mouseX, mouseY)
+#
+#     # make sure no one's used this space
+#     if ((grid[row][col] == "X") or (grid[row][col] == "O")):
+#         # this space is in use
+#         return
+#     # draw an X or O
+#     draw_move(board, row, col, XO)
+#
+#     # toggle XO to the other player's move
+#     if (XO == "X"):
+#         XO = "O"
+#     else:
+#         XO = "X"
 
 
 def check_for_win(board):
