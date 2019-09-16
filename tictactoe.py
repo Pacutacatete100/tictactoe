@@ -23,18 +23,17 @@ background = pygame.Surface(window_size.get_size())
 background = background.convert()
 background.fill((255, 255, 255))
 
-grid_1_1 = SmallGrid(20, 100, 280, 100, 20, 200, 280, 200, 100, 20, 100, 280, 200, 20, 200, 280)
-grid_2_1 = SmallGrid(320, 100, 580, 100, 320, 200, 580, 200, 400, 20, 400, 280, 500, 20, 500, 280)
-grid_3_1 = SmallGrid(620, 100, 880, 100, 620, 200, 880, 200, 700, 20, 700, 280, 800, 20, 800, 280)
+grid_1_1 = SmallGrid(20, 100, 280, 100, 20, 200, 280, 200, 100, 20, 100, 280, 200, 20, 200, 280, background)
+grid_2_1 = SmallGrid(320, 100, 580, 100, 320, 200, 580, 200, 400, 20, 400, 280, 500, 20, 500, 280, background)
+grid_3_1 = SmallGrid(620, 100, 880, 100, 620, 200, 880, 200, 700, 20, 700, 280, 800, 20, 800, 280, background)
 
-grid_1_2 = SmallGrid(20, 400, 280, 400, 20, 500, 280, 500, 100, 320, 100, 580, 200, 320, 200, 580)
-grid_1_3 = SmallGrid(20, 700, 280, 700, 20, 800, 280, 800, 100, 620, 100, 880, 200, 620, 200, 880)
-grid_2_2 = SmallGrid(320, 400, 580, 400, 320, 500, 580, 500, 400, 320, 400, 580, 500, 320, 500, 580)
+grid_1_2 = SmallGrid(20, 400, 280, 400, 20, 500, 280, 500, 100, 320, 100, 580, 200, 320, 200, 580, background)
+grid_1_3 = SmallGrid(20, 700, 280, 700, 20, 800, 280, 800, 100, 620, 100, 880, 200, 620, 200, 880, background)
+grid_2_2 = SmallGrid(320, 400, 580, 400, 320, 500, 580, 500, 400, 320, 400, 580, 500, 320, 500, 580, background)
 
-grid_3_2 = SmallGrid(620, 400, 880, 400, 620, 500, 880, 500, 700, 320, 700, 580, 800, 320, 800, 580)
-grid_3_3 = SmallGrid(620, 700, 880, 700, 620, 800, 880, 800, 700, 620, 700, 880, 800, 620, 800, 880)
-grid_2_3 = SmallGrid(320, 700, 580, 700, 320, 800, 580, 800, 400, 620, 400, 880, 500, 620, 500, 880)
-
+grid_3_2 = SmallGrid(620, 400, 880, 400, 620, 500, 880, 500, 700, 320, 700, 580, 800, 320, 800, 580, background)
+grid_3_3 = SmallGrid(620, 700, 880, 700, 620, 800, 880, 800, 700, 620, 700, 880, 800, 620, 800, 880, background)
+grid_2_3 = SmallGrid(320, 700, 580, 700, 320, 800, 580, 800, 400, 620, 400, 880, 500, 620, 500, 880, background)
 
 # declare our support functions
 def draw_big_grid():
@@ -173,6 +172,12 @@ def draw_move(board, boardRow, boardCol, Piece):
 #     else:
 #         XO = "X"
 
+def click_board(board):
+
+    print("okook")
+
+
+
 
 def check_for_win(board):
     # determine if anyone has won the game
@@ -213,6 +218,8 @@ def check_for_win(board):
         # game won diagonally right to left
         winner = grid[0][2]
         pygame.draw.line(board, (250, 0, 0), (250, 50), (50, 250), 4)
+
+
 
 # --------------------------------------------------------------------
 # initialize pygame and our window
