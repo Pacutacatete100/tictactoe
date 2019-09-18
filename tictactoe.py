@@ -173,10 +173,7 @@ def draw_move(board, boardRow, boardCol, Piece):
 #         XO = "X"
 
 def click_board(board):
-
-    print("okook")
-
-
+    print(" ")
 
 
 def check_for_win(board):
@@ -234,14 +231,14 @@ running = 1
 
 while (running == 1):
     for event in pygame.event.get():
-        if event.type is QUIT:
+        if event.type is pygame.QUIT:
             running = 0
-        elif event.type is MOUSEBUTTONDOWN:
+        elif event.type is pygame.MOUSEBUTTONDOWN:
             # the user clicked; place an X or O
-            click_board(board)
+            x, y = pygame.mouse.get_pos()
+            # click_board(board, x, y)
+            if grid_2_1.top_middle_rect.collidepoint(x, y):
+                print("top middle rect")
 
-        # check for a winner
-        check_for_win(board)
-
-        # update the display
-        show_board(window_size, board)
+            if grid_1_1.top_left_rect.collidepoint(x, y):#finish this bullshit
+                print("top left rect")
