@@ -231,14 +231,264 @@ running = 1
 
 while (running == 1):
     for event in pygame.event.get():
+        show_board(window_size, board)
         if event.type is pygame.QUIT:
             running = 0
         elif event.type is pygame.MOUSEBUTTONDOWN:
             # the user clicked; place an X or O
             x, y = pygame.mouse.get_pos()
             # click_board(board, x, y)
+            if grid_1_1.top_middle_rect.collidepoint(x, y):
+                print("top middle rect")
+
+            if grid_1_1.top_left_rect.collidepoint(x, y):
+                print("top left rect")
+
+            if grid_1_1.top_right_rect.collidepoint(x, y):
+                print("top right rect")
+
+            if grid_1_1.middle_left_rect.collidepoint(x, y):
+                print("middle left rect")
+
+            if grid_1_1.middle_rect.collidepoint(x, y):
+                print("middle rect")
+
+            if grid_1_1.middle_right_rect.collidepoint(x, y):
+                print("middle left rect")
+
+            if grid_1_1.bottom_left_rect.collidepoint(x, y):
+                print("bottom left rect")
+
+            if grid_1_1.bottom_middle_rect.collidepoint(x, y):
+                print("bottom middle rect")
+
+            if grid_1_1.bottom_right_rect.collidepoint(x, y):
+                print("bottom right rect")
+    #-------------------------------------------------------------------------------------------
             if grid_2_1.top_middle_rect.collidepoint(x, y):
                 print("top middle rect")
 
-            if grid_1_1.top_left_rect.collidepoint(x, y):#finish this bullshit
+            if grid_2_1.top_left_rect.collidepoint(x, y):
                 print("top left rect")
+
+            if grid_2_1.top_right_rect.collidepoint(x, y):
+                print("top right rect")
+
+            if grid_2_1.middle_left_rect.collidepoint(x, y):
+                print("middle left rect")
+
+            if grid_1_2.middle_rect.collidepoint(x, y): #fix 1,2 to 2,1
+                print("middle rect")
+
+            if grid_2_1.middle_right_rect.collidepoint(x, y):
+                print("middle rect rect")
+
+            if grid_2_1.bottom_left_rect.collidepoint(x, y):
+                print("bottom left rect")
+
+            if grid_2_1.bottom_middle_rect.collidepoint(x, y):
+                print("bottom middle rect")
+
+            if grid_2_1.bottom_right_rect.collidepoint(x, y):
+                print("bottom right rect")
+    #--------------------------------------------------------------------------------------------
+            if grid_3_1.top_middle_rect.collidepoint(x, y):
+                print("top middle rect")
+
+            if grid_3_1.top_left_rect.collidepoint(x, y):
+                print("top left rect")
+
+            if grid_3_1.top_right_rect.collidepoint(x, y):
+                print("top right rect")
+
+            if grid_3_1.middle_left_rect.collidepoint(x, y):
+                print("middle left rect")
+
+            if grid_1_3.middle_rect.collidepoint(x, y): #fix 1,2 to 2,1
+                print("middle rect")
+
+            if grid_3_1.middle_right_rect.collidepoint(x, y):
+                print("middle rect rect")
+
+            if grid_3_1.bottom_left_rect.collidepoint(x, y):
+                print("bottom left rect")
+
+            if grid_3_1.bottom_middle_rect.collidepoint(x, y):
+                print("bottom middle rect")
+
+            if grid_3_1.bottom_right_rect.collidepoint(x, y):
+                print("bottom right rect")
+    #------------------------------------------------------------------------------------------
+
+            if grid_1_2.top_middle_rect.collidepoint(x, y):
+                print("top middle rect")
+
+            if grid_1_2.top_left_rect.collidepoint(x, y):
+                print("top left rect")
+
+            if grid_1_2.top_right_rect.collidepoint(x, y):
+                print("top right rect")
+
+            if grid_1_2.middle_left_rect.collidepoint(x, y):
+                print("middle left rect")
+
+            if grid_2_1.middle_rect.collidepoint(x, y): #fix 1,2 to 2,1
+                print("middle rect")
+
+            if grid_1_2.middle_right_rect.collidepoint(x, y):
+                print("middle rect rect")
+
+            if grid_1_2.bottom_left_rect.collidepoint(x, y):
+                print("bottom left rect")
+
+            if grid_1_2.bottom_middle_rect.collidepoint(x, y):
+                print("bottom middle rect")
+
+            if grid_1_2.bottom_right_rect.collidepoint(x, y):
+                print("bottom right rect")
+    #----------------------------------------------------------------------------------------------
+
+            if grid_1_3.top_middle_rect.collidepoint(x, y):
+                print("top middle rect")
+
+            if grid_1_3.top_left_rect.collidepoint(x, y):
+                print("top left rect")
+
+            if grid_1_3.top_right_rect.collidepoint(x, y):
+                print("top right rect")
+
+            if grid_1_3.middle_left_rect.collidepoint(x, y):
+                print("middle left rect")
+
+            if grid_3_1.middle_rect.collidepoint(x, y): #fix 1,2 to 2,1
+                print("middle rect")
+
+            if grid_1_3.middle_right_rect.collidepoint(x, y):
+                print("middle rect rect")
+
+            if grid_1_3.bottom_left_rect.collidepoint(x, y):
+                print("bottom left rect")
+
+            if grid_1_3.bottom_middle_rect.collidepoint(x, y):
+                print("bottom middle rect")
+
+            if grid_1_3.bottom_right_rect.collidepoint(x, y):
+                print("bottom right rect")
+
+    #------------------------------------------------------------------------------------
+            if grid_2_2.top_middle_rect.collidepoint(x, y):
+                print("top middle rect")
+
+            if grid_2_2.top_left_rect.collidepoint(x, y):
+                print("top left rect")
+
+            if grid_2_2.top_right_rect.collidepoint(x, y):
+                print("top right rect")
+
+            if grid_2_2.middle_left_rect.collidepoint(x, y):
+                print("middle left rect")
+
+            if grid_2_2.middle_rect.collidepoint(x, y): #fix 1,2 to 2,1
+                print("middle rect")
+
+            if grid_2_2.middle_right_rect.collidepoint(x, y):
+                print("middle rect rect")
+
+            if grid_2_2.bottom_left_rect.collidepoint(x, y):
+                print("bottom left rect")
+
+            if grid_2_2.bottom_middle_rect.collidepoint(x, y):
+                print("bottom middle rect")
+
+            if grid_2_2.bottom_right_rect.collidepoint(x, y):
+                print("bottom right rect")
+    #----------------------------------------------------------------------------------
+
+            if grid_3_2.top_middle_rect.collidepoint(x, y):
+                print("top middle rect")
+
+            if grid_3_2.top_left_rect.collidepoint(x, y):
+                print("top left rect")
+
+            if grid_3_2.top_right_rect.collidepoint(x, y):
+                print("top right rect")
+
+            if grid_3_2.middle_left_rect.collidepoint(x, y):
+                print("middle left rect")
+
+            if grid_2_3.middle_rect.collidepoint(x, y): #fix 1,2 to 2,1
+                print("middle rect")
+
+            if grid_3_2.middle_right_rect.collidepoint(x, y):
+                print("middle rect rect")
+
+            if grid_3_2.bottom_left_rect.collidepoint(x, y):
+                print("bottom left rect")
+
+            if grid_3_2.bottom_middle_rect.collidepoint(x, y):
+                print("bottom middle rect")
+
+            if grid_3_2.bottom_right_rect.collidepoint(x, y):
+                print("bottom right rect")
+
+    #-------------------------------------------------------------------------------
+
+            if grid_2_3.top_middle_rect.collidepoint(x, y):
+                print("top middle rect")
+
+            if grid_2_3.top_left_rect.collidepoint(x, y):
+                print("top left rect")
+
+            if grid_2_3.top_right_rect.collidepoint(x, y):
+                print("top right rect")
+
+            if grid_2_3.middle_left_rect.collidepoint(x, y):
+                print("middle left rect")
+
+            if grid_3_2.middle_rect.collidepoint(x, y): #fix 1,2 to 2,1
+                print("middle rect")
+
+            if grid_2_3.middle_right_rect.collidepoint(x, y):
+                print("middle right rect")
+
+            if grid_2_3.bottom_left_rect.collidepoint(x, y):
+                print("bottom left rect")
+
+            if grid_2_3.bottom_middle_rect.collidepoint(x, y):
+                print("bottom middle rect")
+
+            if grid_2_3.bottom_right_rect.collidepoint(x, y):
+                print("bottom right rect")
+
+    #-------------------------------------------------------------------------------------------------
+
+            if grid_3_3.top_middle_rect.collidepoint(x, y):
+                print("top middle rect")
+
+            if grid_3_3.top_left_rect.collidepoint(x, y):
+                print("top left rect")
+
+            if grid_3_3.top_right_rect.collidepoint(x, y):
+                print("top right rect")
+
+            if grid_3_3.middle_left_rect.collidepoint(x, y):
+                print("middle left rect")
+
+            if grid_3_3.middle_rect.collidepoint(x, y): #fix 1,2 to 2,1
+                print("middle rect")
+
+            if grid_3_3.middle_right_rect.collidepoint(x, y):
+                print("middle rect rect")
+
+            if grid_3_3.bottom_left_rect.collidepoint(x, y):
+                print("bottom left rect")
+
+            if grid_3_3.bottom_middle_rect.collidepoint(x, y):
+                print("bottom middle rect")
+
+            if grid_3_3.bottom_right_rect.collidepoint(x, y):
+                print("bottom right rect")
+        """
+        TODO: 
+            -fix 1,2 to 2,1
+        """

@@ -94,10 +94,6 @@ class SmallGrid:
                          (self.end_X_vertical_line_2, self.end_Y_vertical_line_2), 4)
 
 
-    """
-    -TODO: 
-        *figure out way to make each rect clickable without doing "blit" thing, unless motivation is provided
 
-        """
 
 
